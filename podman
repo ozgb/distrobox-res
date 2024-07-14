@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Place this script in your user PATH
+# e.g. ~/.local/bin
+# Ensure that `podman` is in your sudoers file:
+#
+# sudo transactional-update run bash -c 'echo "$USER ALL = (root) NOPASSWD: /usr/bin/podman" >> /etc/sudoers.d/sudoers'
+
+# Check if we're in a container
+if [[ -f /run/.containerenv ]] || [[ -f /.dockerenv ]]; then
+    # We're in a container
+    distrobox-host-exec sudo /usr/bin/podman "$@"
+else
+    # We're not in a container
+    sudo /usr/bin/podman "$@"
+fi
+
+# Exit with the status code of the last command
+exit $?
