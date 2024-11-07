@@ -1,0 +1,12 @@
+[dev]
+image=registry.opensuse.org/opensuse/distrobox
+additional_packages="lsd neovim fortune fish starship atuin fzf fd ripgrep direnv"
+additional_packages="patterns-devel-base-devel_basis"
+additional_packages="protobuf-devel"
+additional_packages="rustup"
+init=false
+nvidia=true
+pull=false
+root=false
+replace=false
+start_now=false

@@ -1,0 +1,10 @@
+[kitty-box]
+image=registry.opensuse.org/opensuse/distrobox
+additional_packages="kitty"
+init=false
+nvidia=true
+pull=false
+root=true
+replace=false
+unshare_all=true
+start_now=true

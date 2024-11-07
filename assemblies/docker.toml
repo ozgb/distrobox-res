@@ -1,0 +1,9 @@
+[docker-box]
+image=registry.opensuse.org/opensuse/distrobox
+additional_packages="docker systemd"
+init=true
+nvidia=false
+pull=false
+root=true
+replace=false
+start_now=true
